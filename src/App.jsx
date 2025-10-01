@@ -6,15 +6,41 @@ import { useState } from "react";
 
 function App() {
   const [episodes] = useState(episodeList);
+  const [selectedEpisode, setSelectedEpisode] = useState();
 
   function EpisodeList() {
     return (
       <section className="episodeList">
         <ul>
           {episodeList.map((episode) => {
-            return <li> {episode.title} </li>;
+            return (
+              <li onClick={() => setSelectedEpisode(episode)} key={episode.id}>
+                {" "}
+                {episode.title}{" "}
+              </li>
+            );
           })}
         </ul>
+      </section>
+    );
+  }
+
+  function EpisodeDetails() {
+    if (!selectedEpisode) {
+      return (
+        <section>
+          <h2>Episode Details</h2>
+          <p>Please select episode</p>
+        </section>
+      );
+    }
+
+    return (
+      <section className="details">
+        {name}
+        <h2> {selectedEpisode.name} </h2>
+        {name}
+        <p> {selectedEpisode.description} </p>
       </section>
     );
   }
@@ -26,6 +52,7 @@ function App() {
       </header>
       <main>
         <EpisodeList />
+        <EpisodeDetails />
       </main>
     </>
   );
