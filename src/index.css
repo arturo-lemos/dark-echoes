@@ -1,0 +1,58 @@
+/* I copied most of this from the demo code, hope that is okay. I'm trying to use "materials 3 expressive" with the dark background and the purple. */
+
+body {
+  background-color: #121212;
+  color: #a684ff;
+  /* text-align: center; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 1rem;
+}
+
+/* img {
+  width: 50%;
+} */
+
+main {
+  display: grid;
+  gap: 1ch;
+  margin-top: 24px;
+}
+
+/* @media (width >= 500px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+} */
+
+.episodeList ul {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1ch;
+  text-align: center;
+
+  list-style-type: none;
+  padding: 0.25rem;
+}
+
+.episodeList li {
+  max-width: 160px;
+  padding: 1ch;
+  border: 1px solid #ccc;
+}
+
+.episodeList li:hover {
+  cursor: pointer;
+  font-style: italic;
+}
+
+.details {
+  padding: 0.25rem;
+}

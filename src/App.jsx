@@ -30,6 +30,7 @@ function App() {
       return (
         <section>
           <h2>Episode Details</h2>
+          <h2>#</h2>
           <p>Please select episode</p>
         </section>
       );
@@ -37,9 +38,8 @@ function App() {
 
     return (
       <section className="details">
-        {name}
-        <h2> {selectedEpisode.name} </h2>
-        {name}
+        <h2> {selectedEpisode.title} </h2>
+        <h2> {selectedEpisode.id} </h2>
         <p> {selectedEpisode.description} </p>
       </section>
     );
