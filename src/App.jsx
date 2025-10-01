@@ -5,7 +5,11 @@ import { useState } from "react";
 // console.log(episodeList);
 
 function App() {
-  const [recipeList] = useState(episodeList);
+  const [episodes] = useState(episodeList);
+
+  function EpisodeList() {
+    return <section className="episodeList"></section>;
+  }
 
   return (
     <>
@@ -17,6 +21,6 @@ function App() {
   );
 }
 
-export default function App() {
-  // TODO
-}
+// I had to modify the following line by removing the {} and function (). After removing that, my browser showed the Episode List h1 header"
+export default App;
+// TODO
