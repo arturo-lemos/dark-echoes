@@ -8,7 +8,15 @@ function App() {
   const [episodes] = useState(episodeList);
 
   function EpisodeList() {
-    return <section className="episodeList"></section>;
+    return (
+      <section className="episodeList">
+        <ul>
+          {episodeList.map((episode) => {
+            return <li> {episode.title} </li>;
+          })}
+        </ul>
+      </section>
+    );
   }
 
   return (
@@ -16,7 +24,9 @@ function App() {
       <header>
         <h1>Episode List</h1>
       </header>
-      <main></main>
+      <main>
+        <EpisodeList />
+      </main>
     </>
   );
 }
